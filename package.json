@@ -1,0 +1,33 @@
+{
+  "name": "lelle-modern-project",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "typecheck": "tsgo -p tsconfig.tsgo.json",
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "test": "vitest",
+    "verify": "pnpm format && pnpm check && pnpm typecheck && pnpm lint && pnpm test run"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^7.0.0",
+    "@sveltejs/kit": "^2.49.2",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@typescript/native-preview": "7.0.0-dev.20251218.3",
+    "oxfmt": "^0.18.0",
+    "oxlint": "^1.33.0",
+    "oxlint-tsgolint": "^0.9.1",
+    "svelte": "^5.46.0",
+    "svelte-check": "^4.3.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.16"
+  }
+}
